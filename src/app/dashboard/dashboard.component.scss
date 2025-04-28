@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 :host {
   display: flex;
   justify-content: center;
@@ -12,7 +14,6 @@
     "general-info general-info"
     "sidebar-left sidebar-right";
   gap: 24px;
-  margin-top: 24px;
   width: 70%;
 }
 
@@ -38,7 +39,7 @@
 .worksheet-widget {}
 
 .personal-info-widget {
-  margin-bottom: 24px;
+  margin-bottom: $widget-spacing;
 }
 
 .last-patients-widget {}
