@@ -23,7 +23,7 @@ export const GENERAL_INFO_TILES: ITile[] = [
   },
   {
     title: 'Asetukset',
-    icon: 'settings'
+    icon: 'settings_border'
   },
   {
     title: 'Terveysportti',

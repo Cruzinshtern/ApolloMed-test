@@ -7,7 +7,37 @@
       <mat-icon class="border border-gray-300 bg-gray-500 !text-gray-200 rounded-full !h-[32px] !w-[32px] !flex items-center justify-center">person</mat-icon>
       @if (showUserMenu()) {
         <mat-icon>expand_less</mat-icon>
-        <div class="absolute border top-[40px] left-[-150px] border border-gray-300 rounded-sm p-4 w-[200px]">Hello from menu</div>
+        <div class="absolute top-[24px] left-[-224px] rounded-sm p-4 w-[200px]">
+          <div class="bg-white rounded-md shadow-md p-4 w-64 border border-gray-200">
+            <div class="mb-3">
+              <h3 class="text-lg font-semibold text-gray-800">Kerola Tuomas Veikko</h3>
+              <p class="text-sm text-gray-600">Erikoissairaanhoito</p>
+              <p class="text-sm text-gray-600">Paljatha, esh, P0007</p>
+            </div>
+            <ul class="space-y-2">
+              <li>
+                <button class="flex items-center text-gray-700 hover:text-blue-600 w-full cursor-pointer">
+                  <mat-icon class="mr-2">settings</mat-icon>
+                  <span>Asetukset</span>
+                </button>
+              </li>
+              <hr class="border-gray-200 my-3">
+              <li>
+                <button class="flex items-center text-gray-700 hover:text-blue-600 w-full cursor-pointer">
+                  <mat-icon class="mr-2">supervisor_account</mat-icon>
+                  <span>Avaa ylläpitäjän paneeli</span>
+                </button>
+              </li>
+              <hr class="border-gray-200 my-3">
+              <li>
+                <button class="flex items-center text-gray-700 hover:text-blue-600 w-full cursor-pointer">
+                  <mat-icon class="mr-2">logout</mat-icon>
+                  <span>Kirjaudu ulos</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
       } @else {
         <mat-icon>expand_more</mat-icon>
       }

@@ -1,6 +1,6 @@
-<div class="flex flex-wrap justify-center gap-3 border p-4">
+<div class="flex flex-wrap justify-center gap-3 bg-gray-300 p-4 rounded-md">
   @for (tile of tiles(); track $index) {
-    <apollo-tile [title]="tile.title" [icon]="tile.icon"></apollo-tile>
+    <apollo-tile class="cursor-pointer" [title]="tile.title" [icon]="tile.icon" [isGeneralInfo]="true"></apollo-tile>
   }
 </div>
 

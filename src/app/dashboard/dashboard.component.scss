@@ -11,7 +11,8 @@
   grid-template-areas:
     "general-info general-info"
     "sidebar-left sidebar-right";
-  gap: 16px;
+  gap: 24px;
+  margin-top: 24px;
   width: 70%;
 }
 
@@ -37,7 +38,7 @@
 .worksheet-widget {}
 
 .personal-info-widget {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .last-patients-widget {}
