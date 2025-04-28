@@ -1,6 +1,11 @@
 <div class="flex flex-col gap-2 items-center justify-center p-2">
   <div [class]="iconContainerClasses()">
     <mat-icon>{{ icon() }}</mat-icon>
+    @if (msgCount() > 0) {
+      <div class="absolute top-[-4px] right-[-4px] w-[16px] h-[12px] rounded-full bg-blue-400 text-white flex justify-center items-center">
+        <span class="text-xs">{{msgCount()}}</span>
+      </div>
+    }
   </div>
   <span class="text-xs text-center">{{ title() }}</span>
 </div>

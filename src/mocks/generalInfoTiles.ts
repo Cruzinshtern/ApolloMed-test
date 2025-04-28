@@ -7,7 +7,8 @@ export const GENERAL_INFO_TILES: ITile[] = [
   },
   {
     title: 'Potilaan viestit',
-    icon: 'chat_bubble'
+    icon: 'chat_bubble',
+    msgCount: 3
   },
   {
     title: 'Lääkärin viestit',

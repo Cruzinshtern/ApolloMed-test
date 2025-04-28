@@ -10,11 +10,12 @@ import { MatIconModule } from '@angular/material/icon';
 export class TileComponent {
   title = input.required<string>();
   icon = input.required<string>();
+  msgCount = input<number>(0);
   isGeneralInfo = input<boolean>(false);
   isLast = input<boolean>(false)
 
   iconContainerClasses = computed(() => {
-    let classes = 'h-[40px] w-[40px] flex justify-center items-center rounded-md shadow-sm cursor-pointer';
+    let classes = 'h-[40px] w-[40px] flex justify-center items-center rounded-md shadow-sm cursor-pointer relative';
     if (this.isGeneralInfo()) {
       classes += ' bg-gradient-to-b from-gray-300 to-gray-200';
     } else {

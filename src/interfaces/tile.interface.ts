@@ -1,4 +1,5 @@
 export interface ITile {
   title: string,
-  icon: string
+  icon: string,
+  msgCount?: number
 }
