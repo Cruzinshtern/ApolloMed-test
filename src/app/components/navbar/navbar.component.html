@@ -1,15 +1,16 @@
 <div class="flex items-center justify-between p-4">
   <span>ApolloMed</span>
   <apollo-input placeholder="Hae avainsanoja..." class="w-2/3"></apollo-input>
-  <div class="flex gap-4">
-    <i class="fa-regular fa-bell fa-2x text-gray-500"></i>
+  <div class="flex gap-4 items-center">
+    <mat-icon class="!text-gray-500">notifications_none</mat-icon>
     <div class="h-[34px] w-[55px] bg-gray-100 rounded-full border border-gray-300 flex items-center justify-between relative cursor-pointer" (click)="toggleShowUserMenu()">
-      <i class="fa fa-user-circle text-gray-200 bg-gray-500 rounded-full fa-2x"></i>
+      <mat-icon class="border border-gray-300 bg-gray-500 !text-gray-200 rounded-full !h-[32px] !w-[32px] !flex items-center justify-center">person</mat-icon>
       @if (showUserMenu()) {
-        <i class="fa fa-chevron-up fa-xs mr-1" ></i>
+        <mat-icon>expand_less</mat-icon>
+
         <div class="absolute border top-[40px] left-[-150px] border border-gray-300 rounded-sm p-4 w-[200px]">Hello from menu</div>
       } @else {
-        <i class="fa fa-chevron-down fa-xs mr-1"></i>
+        <mat-icon>expand_more</mat-icon>
       }
     </div>
   </div>
