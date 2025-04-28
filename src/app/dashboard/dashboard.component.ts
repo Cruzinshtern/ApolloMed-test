@@ -3,10 +3,11 @@ import { GeneralInfoComponent } from "../widgets/general-info/general-info.compo
 import { WorksheetComponent } from "../widgets/worksheet/worksheet.component";
 import { PersonalInfoComponent } from "../widgets/personal-info/personal-info.component";
 import { LastPatientsComponent } from "../widgets/last-patients/last-patients.component";
+import { WidgetComponent } from "../shared/widget/widget.component";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [GeneralInfoComponent, WorksheetComponent, PersonalInfoComponent, LastPatientsComponent],
+  imports: [GeneralInfoComponent, WorksheetComponent, PersonalInfoComponent, LastPatientsComponent, WidgetComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

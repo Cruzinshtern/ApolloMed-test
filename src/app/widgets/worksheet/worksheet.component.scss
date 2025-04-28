@@ -1,5 +1,5 @@
 @use 'variables' as *;
 
 .internal-padding {
-  padding: $widget-internal-padding;
+  padding: $widget-internal-padding $widget-internal-padding 0;
 }

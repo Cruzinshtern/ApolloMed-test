@@ -3,10 +3,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { Subject, takeUntil } from 'rxjs';
 import { DashboardService } from '../../services/dashboard.service';
 import { IAppointment } from '../../../interfaces/appointment.interface';
+import { TileComponent } from "../../shared/tile/tile.component";
 
 @Component({
   selector: 'widget-worksheet',
-  imports: [MatIconModule],
+  imports: [MatIconModule, TileComponent],
   templateUrl: './worksheet.component.html',
   styleUrl: './worksheet.component.scss'
 })
