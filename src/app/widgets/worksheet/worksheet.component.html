@@ -18,7 +18,7 @@
         </div>
 
         <div class="ml-auto flex gap-2">
-          <button type="button" class="rounded-md bg-blue-500 text-white px-1 cursor-pointer">Avaa etavastaanotto</button>
+          <button type="button" class="rounded-md bg-blue-800 text-white px-1 cursor-pointer">Avaa etavastaanotto</button>
           <button type="button" class="rounded-md bg-blue-500 text-white px-1 cursor-pointer">Avaa potilas</button>
           <button type="button" class="rounded-md bg-blue-300 text-white px-1 cursor-pointer">Viestit</button>
         </div>
@@ -27,10 +27,16 @@
   </div>
   <div class="border-t border-gray-300 mx-[-16px] internal-padding">
     <div class="flex justify-between items-center">
-      <h3 class="text-lg">Muistiinpanot</h3>
-      <div>
-        <mat-icon>delete</mat-icon>
-        <mat-icon>download</mat-icon>
+      <h3 class="text-lg font-semibold">Muistiinpanot</h3>
+
+      <div class="flex gap-3">
+        <button class="w-8 h-8 bg-gray-300 rounded-md flex items-center justify-center hover:bg-gray-400 transition cursor-pointer">
+          <mat-icon class="text-base">delete</mat-icon>
+        </button>
+
+        <button class="w-8 h-8 bg-gray-300 rounded-md flex items-center justify-center hover:bg-gray-400 transition cursor-pointer">
+          <mat-icon class="text-base">download</mat-icon>
+        </button>
       </div>
     </div>
     <div>

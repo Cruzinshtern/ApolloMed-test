@@ -1,4 +1,14 @@
 <div class="rounded-md shadow-sm text-sm internal-padding" [class]="background()">
-  <h2 class="text-lg font-semibold text-gray-800 mb-3">{{ title() }}</h2>
+  <div class="flex gap-2 mb-3">
+    <h2 class="text-lg font-semibold text-gray-800">{{ title() }}</h2>
+    @if (chips()) {
+      @for (chip of chips(); track $index) {
+        <div class="flex items-center gap-2 rounded-md bg-blue-300 px-2 cursor-pointer">
+          <mat-icon class="!h-auto !w-auto !text-xs">{{ chip.icon }}</mat-icon>
+          <span class="!text-xs">{{ chip.title }}</span>
+        </div>
+      }
+    }
+  </div>
   <ng-content></ng-content>
 </div>
