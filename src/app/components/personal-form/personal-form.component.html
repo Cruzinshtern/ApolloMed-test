@@ -1,0 +1,66 @@
+<div class="bg-white rounded-md shadow-md p-6">
+  <div class="flex justify-between items-start mb-4 pb-2 border-b border-gray-200">
+    <div>
+      <p class="text-sm text-gray-600">Tuomas Veikko Kerola, Helsingin Sairaala, Kardiologian osasto</p>
+    </div>
+    <div class="text-right">
+      <div class="flex items-center text-sm text-gray-600">
+        <span>29/10/2024 14:49</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="potilaanKokoNimi" class="block text-sm font-medium text-gray-700">Potilaan koko nimi:</label>
+     <apollo-input [placeholder]="''"></apollo-input>
+  </div>
+
+  <div class="grid grid-cols-2 gap-x-4 mb-6 pb-6 border-b border-gray-200">
+    <div>
+      <label for="syntymaAika" class="block text-sm font-medium text-gray-700">Syntymäaika:</label>
+      <apollo-input [placeholder]="''"></apollo-input>
+    </div>
+    <div>
+      <label for="potilasTunnus" class="block text-sm font-medium text-gray-700">Potilastunnus:</label>
+      <apollo-input [placeholder]="''"></apollo-input>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="tapahtumanTyyppi" class="block text-sm font-medium text-gray-700">Tapahtuman tyyppi:</label>
+    <apollo-input [placeholder]="'Tapahtuman tyyppi...'" [showMicro]="true"></apollo-input>
+  </div>
+
+  <div class="mb-3">
+    <label for="kaynninSyy" class="block text-sm font-medium text-gray-700">Käynnin syyt:</label>
+    <apollo-input [placeholder]="'Käynnin syyt...'" [showMicro]="true"></apollo-input>
+  </div>
+
+  <div class="mb-6 pb-6 border-b border-gray-200">
+    <label class="block text-sm font-medium text-gray-700">Tila:</label>
+    <apollo-input [type]="'radio'" [radioList]="['Luonnos', 'Valmis', 'Hyväksytty']"></apollo-input>
+  </div>
+
+  <div class="mb-3 flex gap-3 items-center">
+    <label for="laakari" class="block text-sm font-medium text-gray-700 w-2/5">Lääkäri:</label>
+    <apollo-input class="w-full" [placeholder]="''" [type]="'text'" [value]="'Tuomas Veikko Kerola'"></apollo-input>
+  </div>
+
+  <div class="mb-3 flex gap-3 items-center">
+    <label for="vastaanottoAika" class="block text-sm font-medium text-gray-700 w-2/5">Vastaanottoaika ja -päivämäärä:</label>
+    <apollo-input class="w-full" [placeholder]="''" [type]="'datetime'"></apollo-input>
+  </div>
+
+  <div class="mb-4">
+    <label for="lisahuomiot" class="block text-sm font-medium text-gray-700">Lisähuomiot:</label>
+    <apollo-input [placeholder]="''" [type]="'text'" [showMicro]="true"></apollo-input>
+  </div>
+
+  <div class="flex justify-end space-x-2">
+    <button type="submit" class="bg-blue-500 text-white rounded-md shadow-sm py-2 px-4 text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer">Luo tapahtuma</button>
+    <button type="button" class="bg-gray-300 border border-gray-300 rounded-md shadow-sm py-2 px-4 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer">Sulje</button>
+  </div>
+</div>
