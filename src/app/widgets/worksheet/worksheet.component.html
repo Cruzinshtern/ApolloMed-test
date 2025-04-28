@@ -1,1 +1,38 @@
-<p class="border">worksheet works!</p>
+<div class="text-sm bg-white rounded-md shadow-sm">
+  <h3 class="p-4">Työlista</h3>
+  <div class="flex justify-between items-center  p-4">
+    <div class="flex items-center text-gray-500 cursor-pointer">
+      <mat-icon>chevron_left</mat-icon>
+      <span >Eilinen lista</span>
+    </div>
+    <div class="flex items-center text-gray-500 cursor-pointer">
+      <span>Huomisen lista</span>
+      <mat-icon>chevron_right</mat-icon>
+    </div>
+  </div>
+  <div class="flex flex-col gap-3 p-4">
+    @for (appointment of appointments(); track $index) {
+      <div class="flex py-2">
+        <div class="flex items-center">
+          <mat-icon class="cursor-pointer">chevron_right</mat-icon>
+          <div>{{appointment.patientName}} - {{appointment.patientId}} | {{ appointment.type }}</div>
+        </div>
+
+        <div class="ml-auto flex gap-2">
+          <button type="button" class="rounded-md bg-blue-500 text-white px-1 cursor-pointer">Avaa etavastaanotto</button>
+          <button type="button" class="rounded-md bg-blue-500 text-white px-1 cursor-pointer">Avaa potilas</button>
+          <button type="button" class="rounded-md bg-blue-300 text-white px-1 cursor-pointer">Viestit</button>
+        </div>
+      </div>
+    }
+  </div>
+  <div class="border-t border-gray-300 p-4">
+    <div class="flex justify-between items-center">
+      <h3>Muistiinpanot</h3>
+      <div>
+        <mat-icon>delete</mat-icon>
+        <mat-icon>download</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>
