@@ -1,0 +1,94 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "general-info general-info"
+    "sidebar-left sidebar-right";
+  gap: 16px;
+  width: 70%;
+}
+
+.dashboard-sidebar-left {
+  grid-area: sidebar-left;
+  width: 100%;
+}
+
+.dashboard-general-info {
+  grid-area: general-info;
+  width: 100%;
+}
+
+.dashboard-sidebar-right {
+  grid-area: sidebar-right;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.general-info-widget {}
+
+.worksheet-widget {}
+
+.personal-info-widget {
+  margin-bottom: 16px;
+}
+
+.last-patients-widget {}
+
+@media (max-width: 992px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "general-info"
+      "sidebar-left"
+      "sidebar-right";
+  }
+
+  .dashboard-sidebar-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .personal-info-widget,
+  .last-patients-widget {
+    width: calc(50% - 8px);
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-container {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .dashboard-sidebar-left,
+  .dashboard-sidebar-right,
+  .dashboard-general-info {
+    padding: 8px;
+  }
+
+  .general-info-widget {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dashboard-sidebar-right {
+    flex-direction: column;
+  }
+
+  .personal-info-widget,
+  .last-patients-widget {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}

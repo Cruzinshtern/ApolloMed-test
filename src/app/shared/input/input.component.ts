@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'apollo-input',
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './input.component.html',
   styleUrl: './input.component.scss',
 })
